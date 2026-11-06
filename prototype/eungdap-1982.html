@@ -753,7 +753,7 @@ canvas { image-rendering: pixelated; display: block; }
   function prevNum() { var d = ($("#inNum").value || "").replace(/\D/g, ""); while (d.length < 8) d += "·"; $("#inPrev").textContent = inPre + "-" + d.slice(0, 4) + "-" + d.slice(4, 8); }
   function showIntro() {
     inPre = me.pre; $("#intro").classList.add("on"); $("#inYear").value = me.year; $("#inNum").value = me.d;
-    chips($("#inPre"), ["012", "015", "017", "019"], me.pre, function (n) { inPre = n; prevNum(); }); prevNum();
+    chips($("#inPre"), ["010", "011", "012", "015", "017", "019"], me.pre, function (n) { inPre = n; prevNum(); }); prevNum();
   }
   $("#inNum").oninput = prevNum;
   $("#inRand").onclick = function () { var s = ""; for (var i = 0; i < 8; i++) s += Math.floor(Math.random() * 10); $("#inNum").value = s; prevNum(); };
